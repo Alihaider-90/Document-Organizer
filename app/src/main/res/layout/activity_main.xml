@@ -1,35 +1,173 @@
 
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#F7F7FB">
+    android:background="#F8F9FC"
+    android:padding="20dp">
 
     <!-- App Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Ease"
+        android:textColor="#202B45"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Less searching. More finding."
+        android:textSize="14sp"
+        android:textColor="#7A8499"
+        android:layout_marginTop="4dp" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:hint="Find your saved files..."
+        android:padding="14dp"
+        android:textSize="14sp"
+        android:background="#FFFFFF"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <!-- Add File Button -->
+    <Button
+        android:id="@+id/addFileButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="18dp"
+        android:text="+ Add a New File"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#356AE6" />
+
+    <!-- Categories Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse Categories"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="#202B45"
+        android:layout_marginTop="28dp" />
+
+    <!-- Categories Row 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:id="@+id/documentsCategory"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📄&#10;Documents"
+            android:textSize="15sp"
+            android:textColor="#263653"
+            android:background="#E7EEFF" />
+
+        <TextView
+            android:id="@+id/imagesCategory"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="🖼️&#10;Images"
+            android:textSize="15sp"
+            android:textColor="#263653"
+            android:background="#FCEBE8" />
+
+    </LinearLayout>
+
+    <!-- Categories Row 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/videosCategory"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🎬&#10;Videos"
+            android:textSize="15sp"
+            android:textColor="#263653"
+            android:background="#E5F5EB" />
+
+        <TextView
+            android:id="@+id/otherCategory"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:text="📁&#10;Other Files"
+            android:textSize="15sp"
+            android:textColor="#263653"
+            android:background="#FFF1DB" />
+
+    </LinearLayout>
+
+    <!-- Saved Files Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Saved Files"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="#202B45"
+        android:layout_marginTop="28dp" />
+
+    <!-- Empty State -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:gravity="center"
+        android:padding="22dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="File Ease"
-            android:textSize="28sp"
+            android:text="📂"
+            android:textSize="38sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No saved files yet"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#202033" />
+            android:textColor="#263653"
+            android:layout_marginTop="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your documents, organized."
-            android:textSize="14sp"
-            android:textColor="#777777" />
+            android:text="Add your important files to find them quickly."
+            android:textSize="12sp"
+            android:textColor="#7A8499"
+            android:gravity="center"
+            android:layout_marginTop="5dp" />
 
     </LinearLayout>
 
